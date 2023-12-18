@@ -11,11 +11,15 @@
   <div class="bg__kayak"></div>
   <header class="header content">
     <aside class="header__left"><img src="./assets/kayak.png" alt="kayak logo"></aside>
-    <ul class="header__rigth">
-      <li><a href="#">Про нас</a></li>
-      <li><a href="#">Замовлення</a></li>
-      <li><a href="#">Контакти</a></li>
+    <ul class="header__rigth header__open">
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Замовлення</a></li>
+        <li><a href="#">Контакти</a></li>
     </ul>
+    <div class="burger">
+      <img src="./assets/burger.png" alt="burger">
+      <img src="./assets/close.png" alt="close_burger">
+    </div>
   </header>
   <main class="main content">
     <h2 class="main__title">Каяки центр</h2>
@@ -24,31 +28,31 @@
   <section class="order">
     <h2 class="order__title">Замовлення</h2>
     <div class="orders__form">
-      <form action="submit">
+      <form action="">
         <aside class="left__forms">
           <div class="info__input">
             <label>Ім'я</label>
-            <input type="text" placeholder="Type here">
+            <input type="text" placeholder="Type here" required>
           </div>
           <div class="info__input">
             <label>Телефон</label>
-            <input type="tel" placeholder="Type here">
+            <input type="tel" placeholder="Type here" required>
           </div>
           <div class="info__input">
             <label>Кількість каяків</label>
-            <input type="number" placeholder="Type here">
+            <input name="quantity" type="number" placeholder="Type here" required>
           </div>
         </aside>
         <aside class="rigth__input">
           <div class="info__input">
             <label>Кількість годин</label>
-            <input type="number" placeholder="Type here">
+            <input name="hours" type="number" placeholder="Type here" required>
           </div>
           <div class="info__input">
-            <select name="kayaks_type">
-              <option value="kayak">Одинарний каяк</option>
-              <option value="kayak">Двомісний каяк</option>
-              <option value="kayak">Трьохмісний каяк</option>
+            <select name="kayaks_type" id="kayaks_type">
+              <option value="одинарний">Одинарний каяк</option>
+              <option value="двомісний">Двомісний каяк</option>
+              <option value="трьохмісний">Трьохмісний каяк</option>
             </select>
           </div>
         </aside>
@@ -92,5 +96,6 @@
       <p class="tel">+38 (09x) xxx xx xx</p>
     </div>
   </section>
+  <script src="./index.js"></script>
 </body>
 </html>

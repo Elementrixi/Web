@@ -48,6 +48,29 @@ body {
   justify-content: space-around;
   gap: 60px;
 }
+.burger, .burger img:last-child {
+  display: none;
+}
+@media (max-width: 720px) {
+  .header__rigth {
+    display: none;
+  }
+  .header__open {
+    background-color: #483C3C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 30px;
+    width: 70%;
+    height: -webkit-fill-available;
+  }
+  .burger {
+    display: block;
+  }
+}
 .main {
   padding-top: 90px;
   text-align: center;
@@ -71,16 +94,63 @@ body {
   font-weight: 400;
   margin-bottom: 50px;
 }
+
 .orders__form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.orders__form > form{
+.orders__form > form {
+  margin: 0 auto;
+  max-width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
+  gap: 30px;
 }
+
+@media (max-width: 590px) {
+  .order {
+    padding: 185px 50px;
+  }
+  .main__title, .main__text {
+    font-size: 40px;
+  }
+  .buttons__buy, .buttons__total {
+    font-size: 14px !important;
+  }
+  .order__title {
+    font-size: 40px;
+  }
+  .info__input {
+    width: 250px !important;
+  }
+  .header__open {
+    width: 300px;
+  }
+}
+@media (max-width: 460px) {
+  .header__open {
+    width: 200px;
+  }
+}
+@media (max-width: 350px) {
+  .header__open {
+    width: 150px;
+  }
+}
+@media (max-width: 425px) {
+  .main__title, .main__text {
+    font-size: 30px;
+  }
+  .order__title {
+    font-size: 30px;
+  }
+  .info__input {
+    width: 200px !important;
+  }
+}
+
 label {
   color: white;
 }
@@ -102,6 +172,8 @@ input[type="text"], input[type="number"], input[type="tel"], select, option {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .buttons__total {
   padding: 15px 30px;
@@ -129,10 +201,17 @@ input[type="text"], input[type="number"], input[type="tel"], select, option {
 .benefits__cards {
   display: flex;
   justify-content: space-between;
-  gap: 120px;
+  gap: 50px;
+  flex-wrap: wrap
+}
+@media (max-width: 1330px) {
+  .benefits__cards {
+    justify-content: center;
+  }
 }
 .card {
   padding: 35px 55px;
+  width: 200px;
   background-color: #69B0B5;
 }
 .card__header {
@@ -162,4 +241,29 @@ input[type="text"], input[type="number"], input[type="tel"], select, option {
   text-align: center;
   font-weight: 700px;
   font-size: 36px;
+}
+@media (max-width: 590px) {
+  .benefits {
+    padding: 80px 50px;
+  }
+  .contacts {
+    padding: 80px;
+  }
+  .info {
+    font-size: 26px;
+  }
+  .tel {
+    font-size: 26px;
+  }
+}
+@media (max-width: 425px) {
+  .contacts {
+    padding: 50px;
+  }
+  .info {
+    font-size: 16px;
+  }
+  .tel {
+    font-size: 16px;
+  }
 }
